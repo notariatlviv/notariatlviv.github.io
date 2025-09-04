@@ -387,11 +387,13 @@
 </section>
 
 <style>
+/* Основний контейнер відгуків */
 .reviews-container {
     padding: 0 10px;
     position: relative;
 }
 
+/* Список відгуків з горизонтальною прокруткою */
 .reviews-list {
     display: flex;
     gap: 20px;
@@ -402,6 +404,7 @@
     margin-bottom: 20px;
 }
 
+/* Стилізація скролбару */
 .reviews-list::-webkit-scrollbar {
     height: 8px;
 }
@@ -416,6 +419,7 @@
     border-radius: 4px;
 }
 
+/* Картка відгуку */
 .review-card {
     flex: 0 0 300px;
     scroll-snap-align: start;
@@ -425,6 +429,9 @@
     box-shadow: 0 2px 12px rgba(0,0,0,0.08);
     border: 1px solid #e0e0e0;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    min-height: min-content;
 }
 
 .review-card:hover {
@@ -432,11 +439,13 @@
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
+/* Заголовок відгуку */
 .review-header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 8px;
+    flex-shrink: 0;
 }
 
 .review-author-info {
@@ -452,6 +461,7 @@
     object-fit: cover;
 }
 
+/* Метадані відгуку */
 .review-meta {
     display: flex;
     flex-direction: column;
@@ -469,6 +479,7 @@
     font-size: 0.8rem;
 }
 
+/* Іконка Google */
 .google-icon {
     width: 20px;
     height: 20px;
@@ -480,27 +491,33 @@
     opacity: 0.8;
 }
 
+/* Зірки рейтингу */
 .review-stars {
     color: #fbbc04;
     font-size: 1.1rem;
     margin-bottom: 8px;
     letter-spacing: 1px;
+    flex-shrink: 0;
 }
 
+/* Текст відгуку */
 .review-text {
     color: #3c4043;
     font-size: 0.9rem;
     line-height: 1.5;
-    height: 85px;
     overflow-y: auto;
+    margin-bottom: 0;
+    flex-grow: 1;
 }
 
+/* Контейнер для посилання "Всі відгуки" */
 .reviews-link-container {
     text-align: center;
     margin-top: 5px;
     margin-bottom: 10px;
 }
 
+/* Кнопка "Всі відгуки" */
 .reviews-link {
     display: inline-flex;
     align-items: center;
@@ -527,6 +544,7 @@
     height: 20px;
 }
 
+/* Адаптивність для планшетів */
 @media (max-width: 768px) {
     .reviews-list {
         gap: 15px;
@@ -535,13 +553,19 @@
     
     .review-card {
         flex: 0 0 280px;
-        padding: 12px;
+        padding: 14px;
+    }
+    
+    .review-text {
+        font-size: 0.88rem;
     }
 }
 
+/* Адаптивність для мобільних */
 @media (max-width: 480px) {
     .review-card {
         flex: 0 0 260px;
+        padding: 12px;
     }
     
     .review-author {
