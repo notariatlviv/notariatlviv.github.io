@@ -7,14 +7,13 @@
     <meta name="description" content="Приватний нотаріус у Львові. Юридичні послуги, консультації, оформлення документів.">
     <style>
         :root {
-            --main-color: #235c91;
-            --accent-color: #e9b04b;
-            --bg-light: #f5f7fa;
-            --bg-accent: #fff8ec;
-            --bg-main: #ffffff;
-            --text-dark: #1a1a1a;
+            --main-color: #23304b;        /* Темно-синій */
+            --accent-color: #bfa76a;      /* Золото */
+            --bg-light: #f7f5ee;          /* Бежево-сірий */
+            --text-dark: #232323;
+            --section-bg: #fffdfa;
             --border-radius: 16px;
-            --shadow: 0 4px 32px rgba(35,92,145,0.09);
+            --shadow: 0 4px 32px rgba(35,48,75,0.07);
             --font-title: 'Lora', 'Georgia', serif;
             --font-body: 'Inter', 'Arial', sans-serif;
         }
@@ -35,233 +34,152 @@
         }
         header h1 {
             font-family: var(--font-title);
-            font-size: 2.2em;
+            font-size: 2.1em;
             font-weight: 700;
             margin: 0 0 10px 0;
-            letter-spacing: 1px;
+            letter-spacing: .5px;
         }
         header p {
-            font-size: 1.15em;
+            font-size: 1.13em;
             margin: 0;
-            opacity: .99;
+            opacity: .97;
+            font-family: var(--font-title);
+            color: var(--accent-color);
             font-weight: 500;
-            letter-spacing: 0.5px;
         }
         .container {
-            max-width: 860px;
+            max-width: 800px;
             margin: 0 auto;
-            padding: 0 18px;
+            padding: 0 16px;
         }
         section {
-            background: var(--bg-main);
-            margin: 36px 0;
+            background: var(--section-bg);
+            margin: 30px 0;
             border-radius: var(--border-radius);
             box-shadow: var(--shadow);
-            padding: 38px 32px 32px 32px;
+            padding: 32px 26px;
         }
-        /* About Block */
-        .about-main {
-            background: linear-gradient(100deg, var(--bg-accent) 75%, #fff 100%);
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow);
-            margin-bottom: 18px;
-            padding: 32px 22px 30px 22px;
-        }
-        .about-main h2 {
+        section h2 {
             font-family: var(--font-title);
-            font-size: 1.65em;
-            color: var(--accent-color);
+            font-size: 1.42em;
             margin-top: 0;
-            margin-bottom: 16px;
-            letter-spacing: 1px;
-            text-align: left;
-        }
-        .about-main .about-lead {
-            font-size: 1.13em;
-            margin-bottom: 22px;
-            font-weight: 500;
             color: var(--main-color);
-            background: #eaf6fd;
-            padding: 10px 16px;
-            border-radius: 8px;
-            display: inline-block;
+            font-weight: 700;
+            letter-spacing: .03em;
         }
-        .about-main .about-body {
-            font-size: 1.05em;
-            margin-bottom: 22px;
-            line-height: 1.7;
-        }
-        /* Info blocks inside about */
-        .about-features, .about-why, .about-when {
-            margin-bottom: 26px;
-        }
-        .about-features-title, .about-why-title, .about-when-title {
-            font-size: 1.09em;
-            font-weight: 600;
+        section h3 {
+            font-family: var(--font-title);
             color: var(--main-color);
-            margin-top: 0;
             margin-bottom: 8px;
+            font-size: 1.08em;
         }
-        .about-features-list, .about-why-list, .about-when-list {
-            padding-left: 0;
-            margin: 0;
+        .info-list {
             list-style: none;
+            padding: 0;
+            margin: 0;
         }
-        .about-features-list li,
-        .about-why-list li,
-        .about-when-list li {
-            margin-bottom: 10px;
+        .info-list li {
+            margin-bottom: 12px;
             display: flex;
             align-items: flex-start;
-            gap: 9px;
+            gap: 8px;
         }
-        .about-features-list li svg,
-        .about-why-list li svg,
-        .about-when-list li svg {
+        .info-list li svg {
             min-width: 22px;
+            max-width: 22px;
+            margin-top: 2px;
             color: var(--accent-color);
-            margin-top: 3px;
+            flex-shrink: 0;
         }
-        .about-why-list li svg { color: var(--main-color);}
-        /* Call to action */
-        .call-to-action {
-            background: linear-gradient(92deg, #e9b04b22 0%, #fff8ec 100%);
-            border-left: 5px solid var(--accent-color);
-            padding: 16px 22px;
-            color: var(--main-color);
-            font-weight: 600;
-            font-size: 1.09em;
-            margin-top: 16px;
-            border-radius: 8px;
-            box-shadow: 0 2px 16px #e9b04b22;
-        }
-        /* Services block */
-        .services-main {
-            margin-bottom: 18px;
-        }
-        .services-main h2 {
-            font-family: var(--font-title);
-            font-size: 1.28em;
-            color: var(--main-color);
-            margin-top: 0;
-            margin-bottom: 16px;
-            letter-spacing: 0.5px;
-        }
-        .services-list {
-            display: flex;
-            flex-direction: column;
-            gap: 13px;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        .services-list li {
-            background: #f5f7fa;
-            border-left: 5px solid var(--accent-color);
-            border-radius: 8px;
-            padding: 12px 18px 12px 14px;
-            font-size: 1.06em;
-            font-weight: 500;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            box-shadow: 0 2px 8px #e9b04b11;
-        }
-        .services-list li svg {
-            min-width: 24px;
-            color: var(--accent-color);
-        }
-        /* Contacts block */
-        .contacts-main h2 {
-            font-family: var(--font-title);
-            font-size: 1.28em;
-            color: var(--accent-color);
-            margin-top: 0;
-            margin-bottom: 14px;
-        }
-        .contacts-info-list {
-            list-style: none;
-            padding: 0;
-            margin: 0 0 16px 0;
+        .contact-block {
             line-height: 1.7;
         }
-        .contacts-info-list li {
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            gap: 9px;
-        }
-        .contacts-info-list li svg {
-            min-width: 22px;
-            color: var(--main-color);
-            margin-top: 2px;
-        }
-        .contacts-block a {
+        .contact-block a {
             color: var(--main-color);
             text-decoration: none;
             font-weight: 500;
             word-break: break-all;
         }
-        .contacts-block a:hover {
+        .contact-block a:hover {
             text-decoration: underline;
+            color: var(--accent-color);
         }
         .worktime {
             background: var(--bg-light);
             border-radius: 8px;
             padding: 10px 16px;
-            font-size: 1.03em;
-            box-shadow: 0 2px 8px #e9b04b11;
-            font-weight: 500;
-            margin-bottom: 11px;
+            margin: 14px 0 0 0;
+            font-size: 1em;
+            border-left: 3px solid var(--accent-color);
         }
         .location-note {
-            font-size: 0.98em;
+            font-size: 0.97em;
             color: #555;
-            margin-bottom: 13px;
+            margin-top: 8px;
+        }
+        .footer {
+            background: var(--main-color);
+            color: #fff;
+            text-align: center;
+            padding: 24px 0 12px 0;
+            font-size: 1em;
+            border-radius: var(--border-radius) var(--border-radius) 0 0;
+            margin-top: 36px;
+            letter-spacing: .03em;
         }
         .notarius-map {
             margin-top: 18px;
-            border-radius: 13px;
-            overflow: hidden;
-            box-shadow: 0 2px 16px #235c9122;
-            background: #eaf6fd;
-            padding: 6px;
         }
         .map-container {
             width: 100%;
             height: 320px;
-            border-radius: 10px;
+            border-radius: 13px;
             overflow: hidden;
+            box-shadow: var(--shadow);
+            margin-top: 12px;
+            border: 1px solid #e7e3d5;
         }
         .map-container iframe {
             width: 100%;
             height: 100%;
             border: 0;
         }
-        /* Footer */
-        .footer {
-            background: var(--main-color);
-            color: #fff;
-            text-align: center;
-            padding: 22px 0 10px 0;
-            font-size: 1em;
-            border-radius: var(--border-radius) var(--border-radius) 0 0;
-            margin-top: 32px;
+        .about-list, .choose-list, .when-list {
+            list-style: disc;
+            padding-left: 24px;
+            margin-top: 12px;
+            margin-bottom: 10px;
+        }
+        .about-list li,
+        .choose-list li,
+        .when-list li {
+            margin-bottom: 8px;
+            color: var(--main-color);
+        }
+        .call-to-action {
+            margin-top: 22px;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 14px;
+            color: var(--main-color);
+            font-weight: 500;
+            font-size: 1.09em;
+            background: linear-gradient(90deg, #f2ead4 40%, transparent);
+            border-radius: 0 8px 8px 0;
         }
         /* Responsive styles */
         @media (max-width: 650px) {
-            header h1 { font-size: 1.36em; }
-            section { padding: 18px 7px; margin: 14px 0; }
-            .container { padding: 0 4vw; }
-            .footer { font-size: 0.97em; padding: 14px 0 8px 0;}
-            .map-container { height: 210px;}
+            header h1 { font-size: 1.26em; }
+            section { padding: 15px 6px; margin: 14px 0; }
+            .container { padding: 0 3vw; }
+            .footer { font-size: 0.97em; padding: 12px 0 7px 0;}
+            .map-container { height: 180px;}
         }
         @media (max-width: 420px) {
-            header { padding: 16px 0 10px 0;}
-            section { padding: 8px 3px; }
+            header { padding: 14px 0 8px 0;}
+            section { padding: 7px 1px; }
             .container { padding: 0 2vw;}
             .footer { font-size: 0.93em;}
-            .map-container { height: 160px;}
+            .map-container { height: 120px;}
         }
     </style>
     <link href="https://fonts.googleapis.com/css?family=Inter:400,700&display=swap" rel="stylesheet">
@@ -273,38 +191,103 @@
         <p>Ваші документи — моя відповідальність</p>
     </header>
     <main class="container">
-        <section class="about-main">
+        <section>
             <h2>Про нотаріуса</h2>
-            <div class="about-lead">
-                Приватний нотаріус Бей Надія Геннадіївна — це не просто юридичні послуги, а впевненість у кожному документі.
+            <p>
+                Приватний нотаріус Бей Надія Геннадіївна — це не просто юридичні послуги, а впевненість у кожному документі.<br>
+                Моя мета — зробити нотаріальні дії для вас максимально простими та зрозумілими. Я пояснюю все «людською мовою», без складних термінів, щоб ви точно знали, що підписуєте, і почувалися спокійно.
+            </p>
+            <ul class="about-list">
+                <li><b>Оперативність</b> — документи готуються швидко, без черг і зайвих очікувань.</li>
+                <li><b>Прозорість</b> — чітка вартість послуг без прихованих платежів.</li>
+                <li><b>Індивідуальний підхід</b> — кожна ситуація унікальна, і я завжди підбираю оптимальне рішення саме для вас.</li>
+                <li><b>Довіра та конфіденційність</b> — ваші документи та особисті дані під надійним захистом.</li>
+            </ul>
+            <h3>Чому клієнти обирають саме мене</h3>
+            <ul class="choose-list">
+                <li>Вмію пояснити складні речі просто.</li>
+                <li>Допомагаю уникати юридичних ризиків.</li>
+                <li>Створюю умови, коли нотаріальні дії — це не проблема, а швидкий і зручний процес.</li>
+                <li>Атмосфера в офісі комфортна: ви відчуваєте себе не в установі, а у професіонала, який працює для вас.</li>
+            </ul>
+            <h3>Коли звертатися</h3>
+            <ul class="when-list">
+                <li>оформлення спадщини;</li>
+                <li>посвідчення договорів (купівля-продаж, дарування, позика тощо);</li>
+                <li>засвідчення довіреностей та заяв;</li>
+                <li>робота з бізнес-документами;</li>
+                <li>консультації з питань, де потрібне нотаріальне підтвердження.</li>
+            </ul>
+            <div class="call-to-action">
+                Моя робота — дати вам впевненість у завтрашньому дні. Якщо ви цінуєте свій час і спокій, звертайтеся — домовимось про зручний час зустрічі та вирішимо ваше питання швидко й професійно.
             </div>
-            <div class="about-body">
-                Моя мета — зробити нотаріальні дії для вас максимально простими та зрозумілими.<br>
-                Я пояснюю все «людською мовою», без складних термінів, щоб ви точно знали, що підписуєте, і почувалися спокійно.
+        </section>
+        <section>
+            <h2>Популярні послуги</h2>
+            <ul class="info-list">
+                <li>
+                    <svg width="22" height="22" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#bfa76a"/><path d="M8 12l2.5 2.5L16 9" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    Оформлення довіреностей, заповітів
+                </li>
+                <li>
+                    <svg width="22" height="22" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#bfa76a"/><path d="M8 12l2.5 2.5L16 9" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    Засвідчення копій документів
+                </li>
+                <li>
+                    <svg width="22" height="22" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#bfa76a"/><path d="M8 12l2.5 2.5L16 9" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    Оформлення спадщини
+                </li>
+                <li>
+                    <svg width="22" height="22" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#bfa76a"/><path d="M8 12l2.5 2.5L16 9" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    Консультації з юридичних питань
+                </li>
+                <li>
+                    <svg width="22" height="22" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#bfa76a"/><path d="M8 12l2.5 2.5L16 9" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    Робота з бізнес-документами
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Контактна інформація</h2>
+            <ul class="info-list contact-block">
+                <li>
+                    <svg width="22" height="22" fill="none" viewBox="0 0 24 24"><path d="M12 2C7 2 3 6 3 12c0 5.2 4 10 9 10s9-4.8 9-10c0-6-4-10-9-10zm0 2c4.4 0 8 3.6 8 8 0 4.7-3.3 8-8 8s-8-3.3-8-8c0-4.4 3.6-8 8-8zm0 2a6 6 0 100 12A6 6 0 0012 6zm0 2a4 4 0 110 8 4 4 0 010-8z" fill="currentColor"/></svg>
+                    <span>
+                        <b>Адреса офісу:</b> м. Львів, вул. Володимира Великого 16, приміщення 105
+                    </span>
+                </li>
+                <li>
+                    <svg width="22" height="22" fill="none" viewBox="0 0 24 24"><path d="M6.62 10.79a15.1 15.1 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1v3.5a1 1 0 01-1 1C7.72 22 2 16.28 2 9.5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.59a1 1 0 01-.24 1.01l-2.21 2.19z" fill="currentColor"/></svg>
+                    <span>
+                        <b>Телефон:</b> <a href="tel:+380981286601">(098) 128-66-01</a>
+                    </span>
+                </li>
+                <li>
+                    <svg width="22" height="22" fill="none" viewBox="0 0 24 24"><path d="M4 4h16v2l-8 5-8-5V4zm0 4.25l8 5 8-5V20H4V8.25z" fill="currentColor"/></svg>
+                    <span>
+                        <b>Email:</b> <a href="mailto:beinadiianotarius@gmail.com">beinadiianotarius@gmail.com</a>
+                    </span>
+                </li>
+            </ul>
+            <div class="worktime">
+                <b>Графік роботи:</b><br>
+                Пн-Пт: 10:00 – 17:00<br>
+                Сб: 15:00 – 17:00 (за домовленістю)<br>
+                Нд: 15:00 – 17:00 (за домовленістю)
             </div>
-            <div class="about-features">
-                <div class="about-features-title">Я розумію, що клієнтам важливий не лише результат, а й комфорт. Тому завжди дбаю про:</div>
-                <ul class="about-features-list">
-                    <li>
-                        <svg width="22" height="22" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#e9b04b"/><path d="M8 12l2.5 2.5L16 9" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                        <span><b>Оперативність</b> — документи готуються швидко, без черг і зайвих очікувань.</span>
-                    </li>
-                    <li>
-                        <svg width="22" height="22" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#e9b04b"/><path d="M8 12l2.5 2.5L16 9" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                        <span><b>Прозорість</b> — чітка вартість послуг без прихованих платежів.</span>
-                    </li>
-                    <li>
-                        <svg width="22" height="22" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#e9b04b"/><path d="M8 12l2.5 2.5L16 9" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                        <span><b>Індивідуальний підхід</b> — кожна ситуація унікальна, і я завжди підбираю оптимальне рішення саме для вас.</span>
-                    </li>
-                    <li>
-                        <svg width="22" height="22" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#e9b04b"/><path d="M8 12l2.5 2.5L16 9" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                        <span><b>Довіру та конфіденційність</b> — ваші документи та особисті дані під надійним захистом.</span>
-                    </li>
-                </ul>
+            <div class="location-note">
+                Зручне розташування — поруч із зупинкою громадського транспорту та з можливістю швидкого паркування.
             </div>
-            <div class="about-why">
-                <div class="about-why-title">Чому клієнти обирають саме мене</div>
-                <ul class="about-why-list">
-                    <li>
-                        <svg width="22" height="22" fill="none" viewBox="0 0 24 24"><rect x="4
+            <div class="notarius-map">
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4330.1753783284885!2d24.006855685966997!3d49.80979905618127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x63c763c1b4168703%3A0xe016e183db853aa1!2sNotarius!5e0!3m2!1sen!2sua!4v1755767435893!5m2!1sen!2sua"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        Приватний нотаріус Бей Надія Генадіївна &copy; 2025 <br>
+        Львів, вул. Володимира Великого 16, офіс 105
+    </footer>
+</body>
+</html>
