@@ -1,362 +1,478 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Приватний нотаріус Бей Надія Геннадіївна</title>
-  <meta name="description" content="Приватний нотаріус у Львові — нотаріальні послуги, консультації, оформлення документів." />
-  <meta property="og:title" content="Приватний нотаріус Бей Надія Геннадіївна" />
-  <meta property="og:description" content="Надійність та спокій у кожному документі — нотаріальні послуги у Львові" />
-  <meta property="og:type" content="website" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Lora:wght@400;700&display=swap" rel="stylesheet" />
-  <style>
-    :root{
-      --main:#23304b;
-      --accent:#bfa76a;
-      --accent-yellow:#f4b400;
-      --bg:#f7f5ee;
-      --card:#ffffff;
-      --muted:#6b6b6b;
-      --radius:14px;
-      --shadow:0 8px 28px rgba(35,48,75,0.08);
-      --fw-title:'Lora', Georgia, serif;
-      --fw-body:'Inter', Arial, sans-serif;
-      --container:1000px;
-      --gutter:18px;
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Приватний нотаріус Бей Надія Геннадіївна</title>
+    <meta name="description" content="Приватний нотаріус у Львові. Юридичні послуги, консультації, оформлення документів." />
+    <link href="https://fonts.googleapis.com/css?family=Inter:400,700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Lora:700,400&display=swap" rel="stylesheet" />
+    <style>
+        :root{
+            --main-color:#23304b;
+            --accent-color:#f4b400; /* Google-like yellow for stars and accents */
+            --accent-color-muted:#bfa76a; /* original accent for other UI */
+            --bg-light:#f7f5ee;
+            --text-dark:#232323;
+            --section-bg:#fffdfa;
+            --border-radius:16px;
+            --shadow:0 4px 32px rgba(35,48,75,0.07);
+            --font-title:'Lora','Georgia',serif;
+            --font-body:'Inter','Arial',sans-serif;
+        }
 
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family:var(--fw-body);
-      background:var(--bg);
-      color:#222;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      line-height:1.5;
-    }
-    a{ color:inherit; text-decoration:none; }
+        /* Base */
+        html,body{
+            margin:0;
+            padding:0;
+            background:var(--bg-light);
+            color:var(--text-dark);
+            font-family:var(--font-body);
+            font-size:17px;
+            -webkit-font-smoothing:antialiased;
+            -moz-osx-font-smoothing:grayscale;
+        }
 
-    /* Header */
-    header.site-header{
-      position:sticky; top:0; z-index:60;
-      background:linear-gradient(180deg,var(--main),#1f2a3f);
-      color:#fff; box-shadow:var(--shadow);
-      transition:padding .22s ease, box-shadow .22s ease;
-    }
-    header.site-header .wrap{
-      max-width:var(--container); margin:0 auto;
-      padding:26px var(--gutter); display:flex;
-      align-items:center; justify-content:space-between; gap:12px;
-    }
-    header.site-header.shrink .wrap{ padding:10px var(--gutter); }
-    .brand{ display:flex; gap:14px; align-items:center; }
-    .brand .logo{
-      width:44px; height:44px; border-radius:10px;
-      background:linear-gradient(135deg,var(--accent),#d1b67a);
-      display:flex; align-items:center; justify-content:center;
-      box-shadow:0 4px 12px rgba(0,0,0,0.12); font-weight:700; color:#fff;
-      font-family:var(--fw-title);
-    }
-    .brand .title{ display:flex; flex-direction:column; line-height:1; }
-    .brand .title .h{ font-family:var(--fw-title); font-weight:700; font-size:1.02rem; }
-    .brand .title .s{ color:var(--accent); font-size:0.88rem; font-weight:600; }
+        header{
+            background:var(--main-color);
+            color:#fff;
+            padding:34px 0 24px;
+            box-shadow:var(--shadow);
+            text-align:center;
+        }
+        header h1{
+            font-family:var(--font-title);
+            font-size:2em;
+            font-weight:700;
+            margin:0 0 10px;
+            letter-spacing:.5px;
+        }
+        header p{
+            font-size:1.17em;
+            margin:0;
+            opacity:.97;
+            font-family:var(--font-title);
+            color:var(--accent-color-muted);
+            font-weight:500;
+        }
 
-    .header-actions { display:flex; gap:10px; align-items:center; }
-    .btn-primary{
-      display:inline-flex; align-items:center; gap:8px;
-      padding:10px 14px; border-radius:10px;
-      background:linear-gradient(180deg,var(--accent-yellow),#e3b600);
-      color:#111; font-weight:700;
-      box-shadow:0 10px 22px rgba(35,48,75,0.12);
-      transition:transform .15s ease;
-    }
-    .btn-ghost{
-      padding:8px 12px; border-radius:10px; background:transparent;
-      border:1px solid rgba(255,255,255,0.12); color:#fff; font-weight:600;
-    }
+        .container{
+            max-width:800px;
+            margin:0 auto;
+            padding:0 16px;
+        }
 
-    main.container{ max-width:var(--container); margin:24px auto; padding:0 var(--gutter); }
-    section.card{ background:var(--card); border-radius:var(--radius); padding:26px; box-shadow:var(--shadow); margin-bottom:20px; }
-    h2.section-title{ font-family:var(--fw-title); color:var(--main); margin:0 0 10px; font-size:1.36rem; }
-    h3.sub{ font-family:var(--fw-title); color:var(--main); margin:12px 0; }
+        section{
+            background:var(--section-bg);
+            margin:30px 0;
+            border-radius:var(--border-radius);
+            box-shadow:var(--shadow);
+            padding:32px 26px;
+        }
+        section h2{
+            font-family:var(--font-title);
+            font-size:1.42em;
+            margin-top:0;
+            color:var(--main-color);
+            font-weight:700;
+            letter-spacing:.03em;
+        }
+        section h3{
+            font-family:var(--font-title);
+            color:var(--main-color);
+            margin-bottom:8px;
+            font-size:1.08em;
+        }
 
-    .services-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px; margin-top:10px; }
-    .service{ background:linear-gradient(180deg,#fff,#fbfaf6); border-radius:10px; padding:14px; border:1px solid rgba(35,48,75,0.04); display:flex; gap:12px; align-items:flex-start; transition:transform .14s ease, box-shadow .14s ease; }
-    .service:hover{ transform:translateY(-6px); box-shadow:0 12px 28px rgba(35,48,75,0.06); }
-    .service .ic{ width:44px; height:44px; border-radius:8px; background:var(--accent); color:#fff; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 12px rgba(35,48,75,0.06); font-weight:700; }
-    .service .txt{ font-weight:600; color:var(--main); }
+        .info-list{ list-style:none; padding:0; margin:0; }
+        .info-list li{ margin-bottom:12px; display:flex; align-items:flex-start; gap:8px; }
+        .info-list li svg{ min-width:22px; max-width:22px; margin-top:2px; color:var(--accent-color-muted); flex-shrink:0; }
 
-    /* Reviews scroller */
-    .reviews-wrap{ padding-top:4px; }
-    .reviews-scroller{
-      display:flex; gap:12px; overflow-x:auto;
-      padding:12px var(--gutter);
-      scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch;
-      /* prevent scroller from causing page-level overflow by using padding and box-sizing */
-    }
-    .reviews-scroller > *{ box-sizing:border-box; flex:0 0 auto; }
-    .reviews-scroller::-webkit-scrollbar{ height:8px; }
-    .reviews-scroller::-webkit-scrollbar-thumb{ background:linear-gradient(180deg,var(--accent), #caae71); border-radius:8px; }
+        .contact-block{ line-height:1.7; }
+        .contact-block a{ color:var(--main-color); text-decoration:none; font-weight:500; word-break:break-all; }
+        .contact-block a:hover{ text-decoration:underline; color:var(--accent-color-muted); }
 
-    .review-card{
-      min-width:300px;
-      max-width:420px;
-      width:100%;
-      background:#fff; border-radius:12px; padding:12px;
-      border:1px solid rgba(0,0,0,0.04);
-      box-shadow:0 8px 18px rgba(35,48,75,0.04);
-      scroll-snap-align:start;
-      display:flex; flex-direction:column; gap:10px;
-    }
-    .review-header{ display:flex; gap:10px; align-items:center; }
-    .avatar{ width:40px; height:40px; border-radius:50%; object-fit:cover; border:2px solid var(--accent); max-width:100%; }
-    .meta{ display:flex; flex-direction:column; gap:2px; }
-    .meta .name{ font-weight:700; color:var(--main); font-family:var(--fw-title); }
-    .meta .time{ color:var(--muted); font-size:0.86rem; }
-    .stars{ margin-left:auto; display:inline-flex; gap:4px; align-items:center; }
-    .stars svg{ width:16px; height:16px; }
-    .stars svg path{ fill:var(--accent-yellow); filter:drop-shadow(0 1px 0 rgba(0,0,0,0.06)); }
+        .worktime{
+            background:var(--bg-light);
+            border-radius:8px;
+            padding:10px 16px;
+            margin:14px 0 0 0;
+            font-size:1em;
+            border-left:3px solid var(--accent-color-muted);
+        }
+        .location-note{ font-size:0.97em; color:#555; margin-top:8px; }
 
-    .rtext{ font-size:0.98rem; color:#222; margin:0; line-height:1.45; max-height:4.2em; overflow:hidden; position:relative; }
-    .rtext.expanded{ max-height:20em; }
-    .read-toggle{ margin-top:6px; background:transparent; border:none; color:var(--main); font-weight:700; cursor:pointer; }
+        .footer{
+            background:var(--main-color);
+            color:#fff;
+            text-align:center;
+            padding:24px 0 12px 0;
+            font-size:1em;
+            border-radius:var(--border-radius) var(--border-radius) 0 0;
+            margin-top:36px;
+            letter-spacing:.03em;
+        }
 
-    .map-card{ padding:14px; border-radius:12px; background:linear-gradient(180deg,#fff,#fffaf3); border:1px solid rgba(0,0,0,0.03); box-shadow:0 12px 30px rgba(35,48,75,0.06); }
-    .map-frame{ width:100%; height:380px; border-radius:10px; overflow:hidden; border:1px solid #e7e3d5; }
+        /* Map styling: slightly larger and nicer */
+        .notarius-map{ margin-top:18px; }
+        .map-container{
+            width:100%;
+            height:380px; /* increased height */
+            border-radius:14px;
+            overflow:hidden;
+            box-shadow:0 10px 30px rgba(35,48,75,0.12);
+            margin-top:12px;
+            border:1px solid #e7e3d5;
+        }
+        .map-container iframe{ width:100%; height:100%; border:0; display:block; }
 
-    footer.site-footer{ text-align:center; padding:18px; color:#fff; background:var(--main); border-radius:12px; margin-top:18px; }
+        .principles-list, .services-list{ padding-left:0; margin-top:14px; margin-bottom:10px; }
+        .principles-list li, .services-list li{
+            background:#f1eee2;
+            border-radius:8px;
+            margin-bottom:10px;
+            padding:10px 18px;
+            color:var(--main-color);
+            font-weight:500;
+            font-size:1.01em;
+            box-shadow:0 2px 8px rgba(35,48,75,0.04);
+            display:flex;
+            align-items:center;
+            gap:8px;
+        }
+        .principles-list li:before, .services-list li:before{
+            content:"";
+            display:inline-block;
+            width:8px;
+            height:8px;
+            background:var(--accent-color-muted);
+            border-radius:100px;
+            margin-right:12px;
+        }
 
-    .quick-call{
-      position:fixed; right:18px; bottom:18px; width:56px; height:56px; border-radius:50%;
-      display:flex; align-items:center; justify-content:center; z-index:999;
-      background:linear-gradient(180deg,var(--accent-yellow),#e3b600);
-      box-shadow:0 14px 30px rgba(35,48,75,0.18); transform:translateY(110%); opacity:0; transition:all .36s cubic-bezier(.2,.9,.3,1);
-    }
-    .quick-call.visible{ transform:translateY(0); opacity:1; }
-    .quick-call svg{ width:22px; height:22px; fill:#fff; }
+        .call-to-action{
+            margin-top:22px;
+            border-left:5px solid var(--accent-color-muted);
+            padding-left:14px;
+            color:var(--main-color);
+            font-weight:500;
+            font-size:1.09em;
+            background:linear-gradient(90deg, #f2ead4 40%, transparent);
+            border-radius:0 8px 8px 0;
+        }
 
-    /* Fixes for small screens to prevent "виїзд" */
-    @media (max-width:480px){
-      .reviews-scroller{
-        padding-left:12px;
-        padding-right:12px;
-        gap:10px;
-      }
-      .review-card{
-        min-width: calc(100% - 24px); /* occupy available width minus padding */
-        max-width: calc(100% - 24px);
-      }
-      .map-frame{ height:260px; }
-      header.site-header .wrap{ padding:12px 12px; }
-    }
+        /* Reviews */
+        .reviews-container{ padding:0; position:relative; }
 
-    @media (max-width:720px){
-      .map-frame{ height:260px; }
-      header.site-header .wrap{ padding:12px var(--gutter); }
-    }
-  </style>
+        .reviews-list{
+            display:flex;
+            flex-direction:column;
+            gap:14px;
+            margin:0;
+            padding:0;
+            list-style:none;
+        }
+
+        .review-card{
+            background:#ffffff;
+            border-radius:12px;
+            box-shadow:0 2px 12px rgba(35,48,75,0.06);
+            padding:12px 12px;
+            max-width:520px; /* reduced width per request */
+            width:100%;
+            margin:0 auto;
+            border:1px solid #e7e3d5;
+            display:flex;
+            flex-direction:column;
+            gap:8px;
+        }
+
+        .review-header{
+            display:flex;
+            align-items:center;
+            gap:12px;
+        }
+        .review-author-info{
+            display:flex;
+            align-items:center;
+            gap:10px;
+        }
+        .review-avatar{
+            width:36px;
+            height:36px;
+            border-radius:50%;
+            object-fit:cover;
+            border:2px solid var(--accent-color-muted);
+            box-shadow:0 1px 6px rgba(231,227,213,0.6);
+            flex-shrink:0;
+        }
+        .review-meta{ display:flex; flex-direction:column; gap:2px; }
+        .review-author{
+            font-weight:600;
+            color:var(--main-color);
+            font-family:var(--font-title);
+            font-size:0.98rem;
+            line-height:1;
+        }
+        .review-time{ color:#777; font-size:0.8rem; }
+
+        /* Google-like colored stars */
+        .review-stars{
+            color:var(--accent-color);
+            font-size:1rem;
+            margin-left:auto;
+            font-family:var(--font-title);
+            line-height:1;
+            filter: drop-shadow(0 1px 0 rgba(0,0,0,0.06));
+        }
+
+        .review-text{
+            font-size:0.98rem;
+            color:var(--text-dark);
+            margin:0;
+            padding-left:48px; /* aligns under author visually */
+            padding-right:8px;
+            line-height:1.45;
+        }
+
+        /* make text full width under header on small screens */
+        @media (max-width:650px){
+            .review-card{ max-width:100%; padding:10px; }
+            .review-avatar{ width:34px; height:34px; }
+            .review-text{ padding-left:0; font-size:0.96rem; }
+            section{ padding:18px 12px; margin:18px 0; }
+            .map-container{ height:240px; }
+        }
+
+        @media (max-width:420px){
+            header{ padding:14px 0 8px 0; }
+            section{ padding:10px 8px; }
+            .review-avatar{ width:32px; height:32px; }
+            .review-author{ font-size:0.95rem; }
+            .review-text{ font-size:0.95rem; }
+            .map-container{ height:180px; }
+        }
+
+        /* Reviews link/button */
+        .reviews-link{
+            display:inline-flex;
+            align-items:center;
+            gap:8px;
+            padding:8px 14px;
+            color:var(--main-color);
+            background:var(--bg-light);
+            text-decoration:none;
+            font-size:0.95rem;
+            font-weight:500;
+            border-radius:8px;
+            border:1px solid var(--accent-color-muted);
+            margin:8px 0 0 auto;
+        }
+        .reviews-link img{ width:18px; height:18px; }
+        .reviews-link:hover{ background:var(--accent-color-muted); color:white; transform:translateY(-1px); }
+
+        /* Quick call button (fixed, slides in on scroll) */
+        .quick-call {
+            position:fixed;
+            right:18px;
+            bottom:18px;
+            width:56px;
+            height:56px;
+            border-radius:50%;
+            background:linear-gradient(180deg,var(--accent-color) 0%, #e3b600 100%);
+            color:#fff;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            box-shadow:0 8px 24px rgba(36,34,28,0.2);
+            text-decoration:none;
+            z-index:9999;
+            transform: translateY(120%); /* hidden initially */
+            opacity:0;
+            transition: transform 360ms cubic-bezier(.2,.9,.3,1), opacity 260ms ease;
+        }
+        .quick-call.visible{ transform: translateY(0); opacity:1; }
+        .quick-call:active{ transform: translateY(2px); }
+
+        .quick-call svg{ width:22px; height:22px; fill:white; }
+
+        /* small aria-hidden label style for assistive */
+        .sr-only{ position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+
+    </style>
 </head>
 <body>
-  <!-- Developer note: Розробник: notariatlviv — останнє редагування: 2025-09-05 -->
-  <header class="site-header" id="siteHeader">
-    <div class="wrap">
-      <div class="brand" aria-hidden="false">
-        <div class="logo" aria-hidden="true">Б</div>
-        <div class="title">
-          <div class="h">Бей Надія Геннадіївна</div>
-          <div class="s">Приватний нотаріус, Львів</div>
-        </div>
-      </div>
-      <div class="header-actions" role="navigation" aria-label="Головні дії">
-        <a class="btn-ghost" href="#contacts">Контакти</a>
-        <a class="btn-primary" href="tel:+380981286601" aria-label="Подзвонити нотаріусу">
-          <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="#fff" d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.06-.24 11.36 11.36 0 003.55.57 1 1 0 011 1v3.5a1 1 0 01-1 1A19 19 0 013 5 1 1 0 014 4h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.55 1 1 0 01-.24 1.06l-2.2 2.18z"/></svg>
-          Подзвонити
-        </a>
-      </div>
-    </div>
-  </header>
+    <header>
+        <h1>Приватний нотаріус Бей Надія Геннадіївна</h1>
+        <p>Надійність та спокій у кожному документі</p>
+    </header>
 
-  <main class="container" id="main">
-    <section class="card" id="about">
-      <h2 class="section-title">Про мене</h2>
-      <p>Я — приватний нотаріус Бей Надія Геннадіївна. Маю багаторічний досвід у нотаріаті та надаю підтримку під час оформлення спадщини, довіреностей, заповітів та інших важливих документів.</p>
-      <p>Працюю прозоро, пояснюю всі кроки доступною мовою та забезпечую конфіденційність.</p>
-      <h3 class="sub">Мої принципи</h3>
-      <div class="services-grid" aria-hidden="false">
-        <div class="service"><div class="ic">✓</div><div class="txt">Оперативність</div></div>
-        <div class="service"><div class="ic">💬</div><div class="txt">Індивідуальний підхід</div></div>
-        <div class="service"><div class="ic">🔒</div><div class="txt">Конфіденційність</div></div>
-        <div class="service"><div class="ic">💼</div><div class="txt">Юридична точність</div></div>
-      </div>
-    </section>
+    <main class="container">
+        <section>
+            <h2>Про мене</h2>
+            <p>
+                Я — приватний нотаріус Бей Надія Геннадіївна.<br>
+                Моя робота — допомогти вам швидко та надійно оформити документи без зайвих переживань.
+            </p>
+            <p>
+                Я пояснюю кожен крок «людською мовою», щоб ви точно знали, що підписуєте, і почувалися впевнено.<br>
+                Для мене важливо, щоб ви отримали не лише печатку на документі, а й відчуття спокою, що все зроблено правильно.
+            </p>
+            <h3>Мої принципи:</h3>
+            <ul class="principles-list">
+                <li>оперативність без черг;</li>
+                <li>прозора вартість без прихованих платежів;</li>
+                <li>індивідуальний підхід до кожної ситуації;</li>
+                <li>повна конфіденційність і захист ваших даних.</li>
+            </ul>
+        </section>
 
-    <section class="card" id="services">
-      <h2 class="section-title">Популярні послуги</h2>
-      <div class="services-grid">
-        <div class="service"><div class="ic">🏛</div><div class="txt">Оформлення спадщини</div></div>
-        <div class="service"><div class="ic">✍️</div><div class="txt">Довіреності (всі типи)</div></div>
-        <div class="service"><div class="ic">📝</div><div class="txt">Заповіти</div></div>
-        <div class="service"><div class="ic">📄</div><div class="txt">Засвідчення копій та підписів</div></div>
-        <div class="service"><div class="ic">🤝</div><div class="txt">Посвідчення договорів</div></div>
-        <div class="service"><div class="ic">🏢</div><div class="txt">Документи для бізнесу</div></div>
-      </div>
-    </section>
+        <section>
+            <h2>Популярні послуги</h2>
+            <ul class="services-list">
+                <li>Оформлення спадщини без зайвих турбот</li>
+                <li>Довіреності (разові, генеральні, для виїзду за кордон тощо)</li>
+                <li>Заповіти з гарантією захисту інтересів</li>
+                <li>Засвідчення копій та підписів</li>
+                <li>Посвідчення договорів (купівля-продаж, дарування, позика тощо)</li>
+                <li>Документи для бізнесу «під ключ»</li>
+                <li>Юридичні консультації</li>
+            </ul>
+        </section>
 
-    <section class="card" id="reviews">
-      <h2 class="section-title">Відгуки клієнтів</h2>
-      <div class="reviews-wrap">
-        <div class="reviews-scroller" aria-label="Список відгуків">
-          <article class="review-card" role="article" aria-label="відгук Svitlana">
-            <div class="review-header">
-              <img class="avatar" src="https://lh3.googleusercontent.com/a-/ALV-UjUcSn8ZqyLFLGUWKZsMdGCK_AWP50XQdo9sZ5WkhUO_QwyRVPcn=w72-h72-p-rp-mo-br100" alt="Аватар Svitlana Prasol" loading="lazy" />
-              <div class="meta">
-                <div class="name">Svitlana Prasol</div>
-                <div class="time">місяць тому</div>
-              </div>
-              <div class="stars" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.788 1.402 8.172L12 18.896 4.664 23.17l1.402-8.172L.132 9.21l8.2-1.192z"/></svg>
-                <svg viewBox="0 0 24 24"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.788 1.402 8.172L12 18.896 4.664 23.17l1.402-8.172L.132 9.21l8.2-1.192z"/></svg>
-                <svg viewBox="0 0 24 24"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.788 1.402 8.172L12 18.896 4.664 23.17l1.402-8.172L.132 9.21l8.2-1.192z"/></svg>
-                <svg viewBox="0 0 24 24"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.788 1.402 8.172L12 18.896 4.664 23.17l1.402-8.172L.132 9.21l8.2-1.192z"/></svg>
-                <svg viewBox="0 0 24 24"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.788 1.402 8.172L12 18.896 4.664 23.17l1.402-8.172L.132 9.21l8.2-1.192z"/></svg>
-              </div>
+        <section>
+            <h2>Відгуки клієнтів</h2>
+
+            <div class="reviews-container">
+                <div class="reviews-list">
+                    <!-- Review 1 -->
+                    <article class="review-card" aria-label="Відгук від Svitlana Prasol">
+                        <div class="review-header">
+                            <div class="review-author-info">
+                                <img src="https://lh3.googleusercontent.com/a-/ALV-UjUcSn8ZqyLFLGUWKZsMdGCK_AWP50XQdo9sZ5WkhUO_QwyRVPcn=w72-h72-p-rp-mo-br100" alt="Аватар Svitlana Prasol" class="review-avatar" />
+                                <div class="review-meta">
+                                    <div class="review-author">Svitlana Prasol</div>
+                                    <div class="review-time">місяць тому</div>
+                                </div>
+                            </div>
+                            <div class="review-stars" aria-hidden="true">★★★★★</div>
+                        </div>
+                        <p class="review-text">
+                            Нотаріус заслуговує свою "5-ку"! Все було зроблено професійно, швидко (наскільки це можливо) і з ретельним роз'ясненням. Щиро дякую за працю!
+                        </p>
+                    </article>
+
+                    <!-- Review 2 -->
+                    <article class="review-card" aria-label="Відгук від Ірина Володько">
+                        <div class="review-header">
+                            <div class="review-author-info">
+                                <img src="https://lh3.googleusercontent.com/a-/ALV-UjW2ch1Gp1JKAzvwxAjfkFcI4icvY3ji2JGqLSw13MB_FZX56X_n5w=w72-h72-p-rp-mo-br100" alt="Аватар Ірина Володько" class="review-avatar" />
+                                <div class="review-meta">
+                                    <div class="review-author">Ірина Володько</div>
+                                    <div class="review-time">2 місяці тому</div>
+                                </div>
+                            </div>
+                            <div class="review-stars" aria-hidden="true">★★★★★</div>
+                        </div>
+                        <p class="review-text">
+                            Дуже гарний нотаріус! Всім раджу! Допомогла вирішити досить нестандартні питання!
+                        </p>
+                    </article>
+
+                    <!-- Review 3 -->
+                    <article class="review-card" aria-label="Відгук від Людмила Совик">
+                        <div class="review-header">
+                            <div class="review-author-info">
+                                <img src="https://lh3.googleusercontent.com/a-/ALV-UjXF1Z8vputViWY5HTeTT4-903Xr9bFb8G1Hnu3w2OhJtUfJ_p8GTg=w72-h72-p-rp-mo-br100" alt="Аватар Людмила Совик" class="review-avatar" />
+                                <div class="review-meta">
+                                    <div class="review-author">Людмила Совик</div>
+                                    <div class="review-time">3 місяці тому</div>
+                                </div>
+                            </div>
+                            <div class="review-stars" aria-hidden="true">★★★★★</div>
+                        </div>
+                        <p class="review-text">
+                            Бей Надія Геннадіївна швидко допомогла мені з документами і іншими питаннями в моїй справі. Навіть у вихідні була на зв'язку. Дуже рекомендую.
+                        </p>
+                    </article>
+                </div>
+
+                <div style="display:flex; justify-content:flex-end; margin-top:8px;">
+                    <a class="reviews-link" href="https://www.google.com/search?hl=en-UA&gl=ua&q=Notarius,+%D0%92%D0%BE%D0%BB%D0%BE%D0%B4%D0%B8%D0%BC%D0%B8%D1%80%D0%B0+%D0%92%D0%B5%D0%BB%D0%B8%D0%BA%D0%BE%D0%B3%D0%BE,+16,+%D0%9A%D0%B0%D0%B1%D1%96%D0%BD%D0%B5%D1%82,+105,+Lviv,+Lviv+Oblast,+79053&ludocid=16147341470423399073" target="_blank" rel="noopener noreferrer">
+                        <img src="https://www.google.com/favicon.ico" alt="" aria-hidden="true" /> Переглянути всі відгуки
+                    </a>
+                </div>
             </div>
-            <p class="rtext" id="review-1">Нотаріус заслуговує свою "5-ку"! Все було зроблено професійно, швидко (наскільки це можливо) і з ретельним роз'ясненням. Щиро дякую за працю!</p>
-            <button class="read-toggle" data-target="review-1" aria-expanded="false">Читати більше</button>
-          </article>
+        </section>
 
-          <article class="review-card" role="article" aria-label="відгук Ірина">
-            <div class="review-header">
-              <img class="avatar" src="https://lh3.googleusercontent.com/a-/ALV-UjW2ch1Gp1JKAzvwxAjfkFcI4icvY3ji2JGqLSw13MB_FZX56X_n5w=w72-h72-p-rp-mo-br100" alt="Аватар Ірина Володько" loading="lazy" />
-              <div class="meta">
-                <div class="name">Ірина Володько</div>
-                <div class="time">2 місяці тому</div>
-              </div>
-              <div class="stars" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.788 1.402 8.172L12 18.896 4.664 23.17l1.402-8.172L.132 9.21l8.2-1.192z"/></svg>
-                <svg viewBox="0 0 24 24"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.788 1.402 8.172L12 18.896 4.664 23.17l1.402-8.172L.132 9.21l8.2-1.192z"/></svg>
-                <svg viewBox="0 0 24 24"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.788 1.402 8.172L12 18.896 4.664 23.17l1.402-8.172L.132 9.21l8.2-1.192z"/></svg>
-                <svg viewBox="0 0 24 24"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.788 1.402 8.172L12 18.896 4.664 23.17l1.402-8.172L.132 9.21l8.2-1.192z"/></svg>
-                <svg viewBox="0 0 24 24"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.788 1.402 8.172L12 18.896 4.664 23.17l1.402-8.172L.132 9.21l8.2-1.192z"/></svg>
-              </div>
+        <section>
+            <h2>Контакти</h2>
+
+            <ul class="info-list contact-block">
+                <li><b>Телефон:</b> <a href="tel:+380981286601">(098) 128-66-01</a></li>
+                <li><b>Email:</b> <a href="mailto:beinadiianotarius@gmail.com">beinadiianotarius@gmail.com</a></li>
+            </ul>
+
+            <div class="worktime">
+                <b>Графік роботи:</b><br />
+                Пн-Пт: 10:00 – 17:00<br />
+                Сб: 15:00 – 17:00 (за домовленістю)<br />
+                Нд: 15:00 – 17:00 (за домовленістю)
             </div>
-            <p class="rtext" id="review-2">Дуже гарний нотаріус! Всім раджу! Допомогла вирішити досить нестандартні питання!</p>
-            <button class="read-toggle" data-target="review-2" aria-expanded="false">Читати більше</button>
-          </article>
 
-          <article class="review-card" role="article" aria-label="відгук Людмила">
-            <div class="review-header">
-              <img class="avatar" src="https://lh3.googleusercontent.com/a-/ALV-UjXF1Z8vputViWY5HTeTT4-903Xr9bFb8G1Hnu3w2OhJtUfJ_p8GTg=w72-h72-p-rp-mo-br100" alt="Аватар Людмила Совик" loading="lazy" />
-              <div class="meta">
-                <div class="name">Людмила Совик</div>
-                <div class="time">3 місяці тому</div>
-              </div>
-              <div class="stars" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.788 1.402 8.172L12 18.896 4.664 23.17l1.402-8.172L.132 9.21l8.2-1.192z"/></svg>
-                <svg viewBox="0 0 24 24"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.788 1.402 8.172L12 18.896 4.664 23.17l1.402-8.172L.132 9.21l8.2-1.192z"/></svg>
-                <svg viewBox="0 0 24 24"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.788 1.402 8.172L12 18.896 4.664 23.17l1.402-8.172L.132 9.21l8.2-1.192z"/></svg>
-                <svg viewBox="0 0 24 24"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.788 1.402 8.172L12 18.896 4.664 23.17l1.402-8.172L.132 9.21l8.2-1.192z"/></svg>
-                <svg viewBox="0 0 24 24"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.788 1.402 8.172L12 18.896 4.664 23.17l1.402-8.172L.132 9.21l8.2-1.192z"/></svg>
-              </div>
+            <div class="location-note">
+                Зручне розташування — поруч із зупинкою громадського транспорту та з можливістю швидкого паркування.
             </div>
-            <p class="rtext" id="review-3">Бей Надія Геннадіївна швидко допомогла мені з документами і іншими питаннями в моїй справі. Навіть у вихідні була на зв'язку. Дуже рекомендую.</p>
-            <button class="read-toggle" data-target="review-3" aria-expanded="false">Читати більше</button>
-          </article>
-        </div>
 
-        <div style="display:flex; justify-content:flex-end; margin-top:8px;">
-          <a class="btn-ghost" href="https://www.google.com/search?hl=en-UA&gl=ua&q=Приватний+нотаріус+Бей+Надія+Геннадіївна" target="_blank" rel="noopener">Переглянути всі відгуки</a>
-        </div>
-      </div>
-    </section>
+            <h3 style="margin-top:18px; color:var(--main-color); font-family:var(--font-title);">Де ми знаходимося?</h3>
 
-    <section class="card" id="contacts" aria-labelledby="contactsTitle">
-      <h2 class="section-title" id="contactsTitle">Контакти</h2>
-      <p><strong>Телефон:</strong> <a href="tel:+380981286601">(098) 128-66-01</a></p>
-      <p><strong>Email:</strong> <a href="mailto:beinadiianotarius@gmail.com">beinadiianotarius@gmail.com</a></p>
+            <div class="notarius-map">
+                <div class="map-container" aria-label="Карта розташування нотаріуса">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4330.1753783284885!2d24.006855685966997!3d49.80979905618127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x63c763c1b4168703%3A0xe016e183db853aa1!2sNotarius!5e0!3m2!1sen!2sua!4v1755767435893!5m2!1sen!2sua" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
 
-      <div class="map-card" style="margin-top:12px;">
-        <h3 class="sub">Де ми знаходимося?</h3>
-        <div class="map-frame">
-          <iframe loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4330.1753783284885!2d24.006855685966997!3d49.80979905618127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x63c763c1b4168703%3A0xe016e183db853aa1!2sNotarius!5e0!3m2!1sen!2sua!4v1755767435893!5m2!1sen!2sua" frameborder="0" style="border:0;" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-        <p class="location-note" style="margin-top:12px;">Зручне розташування — поруч із зупинкою громадського транспорту та з можливістю швидкого паркування.</p>
-      </div>
-    </section>
-  </main>
+    <footer class="footer">
+        Приватний нотаріус Бей Надія Геннадіївна © 2025
+    </footer>
 
-  <footer class="site-footer">
-    Приватний нотаріус Бей Надія Геннадіївна © 2025
-  </footer>
+    <!-- Quick-call floating button -->
+    <a class="quick-call" id="quickCall" href="tel:+380981286601" aria-label="Швидкий дзвінок">
+        <!-- Phone SVG icon -->
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.06-.24 11.36 11.36 0 003.55.57 1 1 0 011 1v3.5a1 1 0 01-1 1A19 19 0 013 5a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.55 1 1 0 01-.24 1.06l-2.2 2.18z"></path>
+        </svg>
+        <span class="sr-only">Зателефонувати</span>
+    </a>
 
-  <a class="quick-call" id="quickCall" href="tel:+380981286601" aria-label="Швидкий дзвінок">
-    <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.06-.24 11.36 11.36 0 003.55.57 1 1 0 011 1v3.5a1 1 0 01-1 1A19 19 0 013 5 1 1 0 014 4h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.55 1 1 0 01-.24 1.06l-2.2 2.18z"/></svg>
-  </a>
+    <script>
+        // Show quick-call when user scrolls down a bit
+        (function(){
+            const btn = document.getElementById('quickCall');
+            let lastScroll = window.scrollY;
+            // show when scrolled 200px or more
+            function onScroll(){
+                const y = window.scrollY || window.pageYOffset;
+                if(y > 200){
+                    btn.classList.add('visible');
+                } else {
+                    btn.classList.remove('visible');
+                }
+                lastScroll = y;
+            }
+            // initial check
+            onScroll();
+            window.addEventListener('scroll', onScroll, { passive: true });
 
-  <script>
-    // header shrink on scroll
-    (function() {
-      var header = document.getElementById('siteHeader');
-      var ticking = false;
-      function onScroll() {
-        if (!ticking) {
-          window.requestAnimationFrame(function () {
-            if (window.scrollY > 60) header.classList.add('shrink');
-            else header.classList.remove('shrink');
-            ticking = false;
-          });
-          ticking = true;
-        }
-      }
-      window.addEventListener('scroll', onScroll, {passive:true});
-      onScroll();
-    })();
-
-    // quick call button show/hide
-    (function(){
-      var quick = document.getElementById('quickCall');
-      function toggle() {
-        if(window.scrollY > 220) quick.classList.add('visible');
-        else quick.classList.remove('visible');
-      }
-      window.addEventListener('scroll', toggle, {passive:true});
-      toggle();
-      quick.addEventListener('click', function(){ quick.classList.remove('visible'); setTimeout(toggle, 700); });
-    })();
-
-    // read more toggles
-    (function(){
-      var btns = document.querySelectorAll('.read-toggle');
-      btns.forEach(function(btn){
-        var id = btn.getAttribute('data-target');
-        var p = document.getElementById(id) || document.querySelector('#' + id);
-        if(!p || p.scrollHeight <= p.clientHeight + 6) { btn.style.display = 'none'; return; }
-        btn.addEventListener('click', function(){
-          var expanded = btn.getAttribute('aria-expanded') === 'true';
-          if(expanded){
-            p.classList.remove('expanded'); btn.textContent = 'Читати більше'; btn.setAttribute('aria-expanded','false');
-          } else {
-            p.classList.add('expanded'); btn.textContent = 'Приховати'; btn.setAttribute('aria-expanded','true');
-          }
-        });
-      });
-    })();
-
-    // carousel keyboard navigation
-    (function(){
-      var scroller = document.querySelector('.reviews-scroller');
-      if(!scroller) return;
-      scroller.setAttribute('tabindex', '0');
-      scroller.addEventListener('keydown', function(e){
-        if(e.key === 'ArrowRight') scroller.scrollBy({left: 320, behavior:'smooth'});
-        if(e.key === 'ArrowLeft') scroller.scrollBy({left: -320, behavior:'smooth'});
-      });
-    })();
-  </script>
+            // optional: hide button briefly after clicking to avoid accidental double taps
+            btn.addEventListener('click', function(){
+                // keep default link behavior (tel:)
+                btn.classList.remove('visible');
+                setTimeout(onScroll, 800);
+            });
+        })();
+    </script>
 </body>
 </html>
