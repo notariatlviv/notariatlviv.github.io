@@ -9,14 +9,14 @@
     <link href="https://fonts.googleapis.com/css?family=Lora:700,400&display=swap" rel="stylesheet" />
     <style>
         :root {
-            --main-color: #e9e6dd; /* Світлий, майже білий - основний фон */
-            --accent-color: #bc9e79; /* Теплий, приємний акцент */
-            --accent-color-muted: #7e3b10; /* Більш насичений акцент для деталей */
-            --bg-light: #fcfcfc; /* Ще трохи світліший фон для контрасту */
-            --text-dark: #2a351a; /* Насичений темно-зелений для основного тексту */
-            --section-bg: #FFFFFF; /* Білий для секцій, щоб виділити контент */
+            --main-color: #e9f0c0; /* Світлий, приємний основний фон */
+            --accent-color: #dcd294; /* Теплий акцентний колір */
+            --accent-color-muted: #aec55d; /* Більш насичений, але приглушений акцент */
+            --bg-light: #f9fbe7; /* Дуже світлий фон для контрасту */
+            --text-dark: #2f1e0a; /* Насичений темно-коричневий для тексту */
+            --section-bg: #FFFFFF; /* Білий для секцій */
             --border-radius: 16px;
-            --shadow: 0 4px 32px rgba(42, 53, 26, 0.09); /* Легка тінь під колір тексту */
+            --shadow: 0 4px 32px rgba(47, 30, 10, 0.08); /* Тінь під колір тексту */
             --font-title: 'Lora', 'Georgia', serif;
             --font-body: 'Inter', 'Arial', sans-serif;
         }
@@ -40,7 +40,7 @@
         /* Header */
         header {
             background: var(--accent-color); /* Акцентний колір для шапки */
-            color: #FFFFFF; /* Білий текст у шапці */
+            color: #2f1e0a; /* Темно-коричневий текст у шапці */
             padding: 34px 0 24px;
             box-shadow: var(--shadow);
             text-align: center;
@@ -59,7 +59,7 @@
             margin: 0;
             opacity: .97;
             font-family: var(--font-title);
-            color: #e9e6dd; /* Світлий колір для підзаголовку */
+            color: #739c3e; /* Зелений колір для підзаголовку */
             font-weight: 500;
         }
 
@@ -123,7 +123,7 @@
         }
 
         .contact-block a {
-            color: var(--text-dark); /* Темний колір для посилань */
+            color: var(--text-dark); /* Темно-коричневий колір для посилань */
             text-decoration: none;
             font-weight: 500;
             word-break: break-all;
@@ -153,8 +153,8 @@
 
         /* Footer */
         footer {
-            background: var(--text-dark); /* Темний колір для футера */
-            color: #e9e6dd; /* Світлий текст у футері */
+            background: var(--text-dark); /* Темно-коричневий для футера */
+            color: #e9f0c0; /* Світлий колір тексту у футері */
             text-align: center;
             padding: 24px 0 12px 0;
             font-size: 1em;
@@ -196,7 +196,7 @@
             border-radius: 8px;
             margin-bottom: 10px;
             padding: 10px 18px;
-            color: var(--text-dark); /* Темний колір для тексту в списках */
+            color: var(--text-dark); /* Темно-коричневий для тексту в списках */
             font-weight: 500;
             font-size: 1.01em;
             box-shadow: 0 2px 8px rgba(35, 48, 75, 0.04);
@@ -219,7 +219,7 @@
             margin-top: 22px;
             border-left: 5px solid var(--accent-color-muted);
             padding-left: 14px;
-            color: var(--text-dark); /* Темний колір для тексту call to action */
+            color: var(--text-dark); /* Темно-коричневий для тексту call to action */
             font-weight: 500;
             font-size: 1.09em;
             background: linear-gradient(90deg, #f2ead4 40%, transparent);
@@ -286,7 +286,7 @@
 
         .review-author {
             font-weight: 600;
-            color: var(--text-dark); /* Темний колір для імені автора */
+            color: var(--text-dark); /* Темно-коричневий колір для імені автора */
             font-family: var(--font-title);
             font-size: 0.98rem;
             line-height: 1;
@@ -309,7 +309,7 @@
 
         .review-text {
             font-size: 0.98rem;
-            color: var(--text-dark); /* Темний колір для тексту відгуку */
+            color: var(--text-dark); /* Темно-коричневий колір для тексту відгуку */
             margin: 0;
             padding-left: 48px;
             padding-right: 8px;
@@ -378,7 +378,7 @@
             align-items: center;
             gap: 8px;
             padding: 8px 14px;
-            color: var(--text-dark); /* Темний колір для тексту посилання */
+            color: var(--text-dark); /* Темно-коричневий колір для тексту посилання */
             background: var(--bg-light);
             text-decoration: none;
             font-size: 0.95rem;
@@ -407,7 +407,7 @@
             width: 56px;
             height: 56px;
             border-radius: 50%;
-            background: linear-gradient(180deg, var(--accent-color) 0%, #646109 100%); /* Коричневий градієнт */
+            background: linear-gradient(180deg, #739c3e 0%, #2f1e0a 100%); /* Зелений градієнт */
             color: #fff;
             display: flex;
             align-items: center;
