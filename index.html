@@ -9,14 +9,14 @@
     <link href="https://fonts.googleapis.com/css?family=Lora:700,400&display=swap" rel="stylesheet" />
     <style>
         :root{
-            --main-color:#23304b;
-            --accent-color:#f4b400; /* Google-like yellow for stars and accents */
-            --accent-color-muted:#bfa76a; /* original accent for other UI */
-            --bg-light:#f7f5ee;
-            --text-dark:#232323;
-            --section-bg:#fffdfa;
+            --main-color:#98c1a2;
+            --accent-color:#7fb389;
+            --accent-color-muted:#b5d4bc;
+            --bg-light:#f0f7f2;
+            --text-dark:#2c4a34;
+            --section-bg:#ffffff;
             --border-radius:16px;
-            --shadow:0 4px 32px rgba(35,48,75,0.07);
+            --shadow:0 4px 32px rgba(152,193,162,0.07);
             --font-title:'Lora','Georgia',serif;
             --font-body:'Inter','Arial',sans-serif;
         }
@@ -122,7 +122,7 @@
         .notarius-map{ margin-top:18px; }
         .map-container{
             width:100%;
-            height:380px; /* increased height */
+            height:380px;
             border-radius:14px;
             overflow:hidden;
             box-shadow:0 10px 30px rgba(35,48,75,0.12);
@@ -183,15 +183,15 @@
             border-radius:12px;
             box-shadow:0 2px 12px rgba(35,48,75,0.06);
             padding:12px 12px;
-            max-width:520px; /* reduced width per request */
+            max-width:520px;
             width:100%;
             margin:0 auto;
             border:1px solid #e7e3d5;
             display:flex;
             flex-direction:column;
             gap:8px;
-            /* ensure padding and border don't increase visual width */
             box-sizing: border-box;
+            text-align: justify; /* Added justify alignment */
         }
 
         .review-header{
@@ -237,10 +237,11 @@
             font-size:0.98rem;
             color:var(--text-dark);
             margin:0;
-            padding-left:48px; /* aligns under author visually on larger screens */
+            padding-left:48px;
             padding-right:8px;
             line-height:1.45;
-            word-break:break-word; /* avoid overflow from long words/URLs */
+            word-break:break-word;
+            text-align: justify; /* Added justify alignment */
         }
 
         /* make text full width under header on small screens */
@@ -296,7 +297,7 @@
             box-shadow:0 8px 24px rgba(36,34,28,0.2);
             text-decoration:none;
             z-index:9999;
-            transform: translateY(120%); /* hidden initially */
+            transform: translateY(120%);
             opacity:0;
             transition: transform 360ms cubic-bezier(.2,.9,.3,1), opacity 260ms ease;
         }
@@ -307,6 +308,11 @@
 
         /* small aria-hidden label style for assistive */
         .sr-only{ position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+
+        /* Added justify alignment to paragraphs */
+        p {
+            text-align: justify;
+        }
 
     </style>
 </head>
@@ -320,20 +326,38 @@
         <section>
             <h2>Про мене</h2>
             <p>
-                Я — приватний нотаріус Бей Надія Геннадіївна.<br>
-                Моя робота — допомогти вам швидко та надійно оформити документи без зайвих переживань.
+                Я, Бей Надія Геннадіївна, урочисто присягаю виконувати обов'язки нотаріуса чесно і сумлінно, згідно з законом і совістю, поважати права і законні інтереси громадян і організацій, зберігати професійну таємницю, скрізь і завжди берегти чистоту високого звання нотаріуса.
             </p>
             <p>
-                Я пояснюю кожен крок «людською мовою», щоб ви точно знали, що підписуєте, і почувалися впевнено.<br>
-                Для мене важливо, щоб ви отримали не лише печатку на документі, а й відчуття спокою, що все зроблено правильно.
+                Мої головні принципи :
+                <ul>
+                    <li>Незалежність</li>
+                    <li>Законність</li>
+                    <li>Об’єктивність і неупередженість</li>
+                    <li>Конфіденційність</li>
+                    <li>Добросовісність</li>
+                    <li>Чесність</li>
+                    <li>Повага до професії</li>
+                    <li>Культура поведінки</li>
+                </ul>
             </p>
-            <h3>Мої принципи:</h3>
-            <ul class="principles-list">
-                <li>оперативність без черг;</li>
-                <li>прозора вартість без прихованих платежів;</li>
-                <li>індивідуальний підхід до кожної ситуації;</li>
-                <li>повна конфіденційність і захист ваших даних.</li>
-            </ul>
+            <p>
+                Вчинення таких видів нотаріальних та інших дій:
+                <ol>
+                    <li>посвідчення правочинів (договорів, заповітів, довіреностей, тощо);</li>
+                    <li>заведення спадкових справ усіх видів складності (включаючи окуповані території, завершення спадкування) з видачею свідоцтва про право на спадщину, видача постанови про відмову у вчиненні нотаріальної дії, тощо;</li>
+                    <li>видача свідоцтв про право власності на частку в спільному майні подружжя (колишнього подружжя) на підставі спільної заяви або в разі смерті одного з подружжя;</li>
+                    <li>засвідчення вірності копій (фотокопій) документів і виписок з них;</li>
+                    <li>засвідчення справжності підпису на документах;</li>
+                    <li>засвідчення вірності перекладу документів з однієї мови на іншу;</li>
+                    <li>посвідчення факту, що фізична особа є живою;</li>
+                    <li>посвідчення факту перебування фізичної особи в певному місці;</li>
+                    <li>посвідчення часу пред’явлення документів;</li>
+                    <li>передання заяви фізичних та юридичних осіб іншим фізичним та юридичним особам.</li>
+                    <li>апостиль на документах;</li>
+                    <li>виклик нотаріуса для вчинення нотаріальної дії за межами нотаріальної контори.</li>
+                </ol>
+            </p>
         </section>
 
         <section>
@@ -419,14 +443,14 @@
 
             <ul class="info-list contact-block">
                 <li><b>Телефон:</b> <a href="tel:+380981286601">(098) 128-66-01</a></li>
+                <li><b>Додатковий телефон:</b> <a href="tel:+380682609600">(068) 260-96-00</a> (Viber, WhatsApp)</li>
                 <li><b>Email:</b> <a href="mailto:beinadiianotarius@gmail.com">beinadiianotarius@gmail.com</a></li>
             </ul>
 
             <div class="worktime">
                 <b>Графік роботи:</b><br />
                 Пн-Пт: 10:00 – 17:00<br />
-                Сб: 15:00 – 17:00 (за домовленістю)<br />
-                Нд: 15:00 – 17:00 (за домовленістю)
+                Субота та неділя: 15:00 – 18:00 (за попередньою домовленістю)
             </div>
 
             <div class="location-note">
