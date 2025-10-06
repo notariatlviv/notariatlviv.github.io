@@ -205,15 +205,24 @@
             gap: 8px;
         }
 
-        .principles-list li:before, .services-list li:before {
-            content: "";
-            display: inline-block;
-            width: 8px;
-            height: 8px;
-            background: var(--accent-color); /* Бірюзовий для маркерів */
-            border-radius: 100px;
-            margin-right: 12px;
-        }
+        .services-list li, .principles-list li {
+    position: relative;
+    padding-left: 28px; /* Більше місця для маркера */
+}
+
+.services-list li:before, .principles-list li:before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: var(--accent-color); /* Бірюзовий для маркерів */
+    border-radius: 100px;
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-right: 0; /* Тепер не потрібен, все через абсолютне позиціонування */
+}
 
         .call-to-action {
             margin-top: 22px;
